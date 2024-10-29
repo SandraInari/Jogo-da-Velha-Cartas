@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Cartas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+    <style>
+        /* Estilo básico para o tabuleiro */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Adicione sua imagem de fundo aqui */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
+            height: 100vh; /* Faz o fundo ocupar toda a altura da tela */
+            margin: 0; /* Remove margens padrão do corpo */
+            color: rgba(24, 25, 26, 0.986); /* Ajusta a cor do texto para se destacar no fundo */
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+            margin-top: 20px;
+        }
+
+        [data-cell] {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: rgba(2, 0, 0, 0.925); /* Fundo das células com transparência */
+        }
+
+        #message {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #restartButton {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo da Velha - Cartas</h1>
+    <div class="board">
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+        <div data-cell class="cell"></div>
+    </div>
+    <div id="message"></div>
+    <button id="restartButton">Reiniciar Jogo</button>
+    <script src="game.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
